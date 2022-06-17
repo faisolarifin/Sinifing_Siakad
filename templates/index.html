@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+         <title>Portal Akademik | Universitas Trunojoyo Madura </title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link href="/static/favicon.ico?utm" rel="SHORTCUT ICON">
+    <link href="/static/a-portal-default-login-loader.css" rel="stylesheet" type="text/css">
+    <link href="/static/a_sia_login.css" rel="stylesheet" type="text/css">
+    <link href="/static/favicon.ico?utm" rel="SHORTCUT ICON">
+    <script src="/static/md5.js" type="text/javascript"></script>
+<!-- tambahan -->
+    <script language="javascript">
+        function clearUserNameField() {
+            document.getElementById('username').value = "";
+        }
+
+        function clearPasswordField() {
+            document.getElementById('password').value = "";
+        }
+
+        var submitencrypt = function () {
+            var btnsubmit = document.getElementById("submit");
+            btnsubmit.click();
+        }
+    </script>
+<!-- end tambahan -->
+
+      </head>
+      <body id="common" onload="clearUserNameField();clearPasswordField();">
+   
+   <!--Content Element-->
+
+    <center>
+      <div id="loginWrapper">
+         <div id="loginBox">
+            <div id="loginBox-head">
+                <div id="loginBoxhead_img"><img src="/static/logo-utm-mini.png" alt="" width="35" height="35"></div>
+                <h1>Universitas Trunojoyo Madura </h1>
+            </div>
+            <div id="loginBox-title">
+               <h2></h2>
+               <img src="/static/loginBox-title-img.jpg" alt="">
+            </div>
+            <div id="loginBox-body">
+               <br>
+               <form id="form-login" method="post" name="form-login" action="{{url_for('index')}}">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" name="username" onblur="clearPasswordField();">
+                  <br>
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password">
+                  <br>
+                  <label> </label>
+                  <input type="button" value="Login" class="button" onclick="submitencrypt()">
+                  <input type="submit" value="Login" id="submit" style="visibility:hidden">
+               </form>
+               <div class="div_kuisioner">
+                   <a id="kuisioner" href="https://siakad.trunojoyo.ac.id/index.php?pModule=ntag2Jmnocup&amp;pSub=m8KqzpyXntugo5vSocaj&amp;pAct=qcqc3A==">Lihat Hasil Kuisioner</a>
+               </div>
+            </div>
+
+            <div id="loginBox-foot">
+                <p>
+                    Copyright © 2016, Powered by: PTIK - UTM
+                </p>
+            </div>
+         </div>
+        </div>
+   </center>
+
+   <!--Content Element-->
+
+      
+   
+</body></html>
